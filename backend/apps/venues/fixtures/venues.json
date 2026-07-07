@@ -1,0 +1,727 @@
+[
+{
+  "model": "venues.venuecategory",
+  "pk": "13f02778-8b58-4c55-8408-d85994bb14d6",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.495Z",
+    "updated_at": "2026-07-04T21:17:53.495Z",
+    "name": "Bar",
+    "slug": "bar"
+  }
+},
+{
+  "model": "venues.venuecategory",
+  "pk": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.492Z",
+    "updated_at": "2026-07-04T21:17:53.492Z",
+    "name": "Restoran",
+    "slug": "restoran"
+  }
+},
+{
+  "model": "venues.venuecategory",
+  "pk": "732a42ba-6fae-4750-9f2f-2c50a68a71e9",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.503Z",
+    "updated_at": "2026-07-04T21:17:53.503Z",
+    "name": "Tatlıcı",
+    "slug": "tatlici"
+  }
+},
+{
+  "model": "venues.venuecategory",
+  "pk": "88d012f1-02d1-4df5-a4f7-f649e4fb3826",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.507Z",
+    "updated_at": "2026-07-04T21:17:53.507Z",
+    "name": "Çay Bahçesi",
+    "slug": "cay-bahcesi"
+  }
+},
+{
+  "model": "venues.venuecategory",
+  "pk": "a60b8054-1f63-4cdc-b4a4-2ced96573c24",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.499Z",
+    "updated_at": "2026-07-04T21:17:53.499Z",
+    "name": "Pub",
+    "slug": "pub"
+  }
+},
+{
+  "model": "venues.venuecategory",
+  "pk": "e0fb6168-c439-4fa4-aa91-c2d8fc62d73f",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.487Z",
+    "updated_at": "2026-07-04T21:17:53.487Z",
+    "name": "Kafe",
+    "slug": "kafe"
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "0626d9c9-7af4-43ea-a433-1dd2437b23df",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.520Z",
+    "updated_at": "2026-07-04T21:17:53.520Z",
+    "name": "Ciya Sofrası",
+    "category": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+    "description": "Ciya Sofrası - İstanbul'da popüler bir restoran mekanı.",
+    "address": "Kadıköy Çarşı, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.9807,
+    "longitude": 29.0277,
+    "google_place_id": "",
+    "google_rating": 4.6,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "082a0a35-2b90-4435-b74e-fd635032ed35",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.541Z",
+    "updated_at": "2026-07-04T21:17:53.541Z",
+    "name": "Beyoğlu Saray Muhallebicisi",
+    "category": "732a42ba-6fae-4750-9f2f-2c50a68a71e9",
+    "description": "Beyoğlu Saray Muhallebicisi - İstanbul'da popüler bir tatlıcı mekanı.",
+    "address": "İstiklal, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0341,
+    "longitude": 28.9779,
+    "google_place_id": "",
+    "google_rating": 4.3,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "10a395f9-6a7d-4cb7-98e9-af96cb7bfda9",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.538Z",
+    "updated_at": "2026-07-04T21:17:53.538Z",
+    "name": "Baylan Kadıköy",
+    "category": "732a42ba-6fae-4750-9f2f-2c50a68a71e9",
+    "description": "Baylan Kadıköy - İstanbul'da popüler bir tatlıcı mekanı.",
+    "address": "Kadıköy, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.9902,
+    "longitude": 29.0245,
+    "google_place_id": "",
+    "google_rating": 4.5,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "2aea621b-d0a1-4ac7-a851-0b16195a67a7",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.525Z",
+    "updated_at": "2026-07-04T21:17:53.525Z",
+    "name": "Balıkçı Kahvaltısı Bebek",
+    "category": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+    "description": "Balıkçı Kahvaltısı Bebek - İstanbul'da popüler bir restoran mekanı.",
+    "address": "Bebek, Beşiktaş, İstanbul",
+    "city": "İstanbul",
+    "district": "Beşiktaş",
+    "latitude": 41.0836,
+    "longitude": 29.043,
+    "google_place_id": "",
+    "google_rating": 4.4,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "2cbef4c5-7471-4ec9-9ade-80124f347e90",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.535Z",
+    "updated_at": "2026-07-04T21:17:53.535Z",
+    "name": "James Joyce Irish Pub",
+    "category": "a60b8054-1f63-4cdc-b4a4-2ced96573c24",
+    "description": "James Joyce Irish Pub - İstanbul'da popüler bir pub mekanı.",
+    "address": "Zorlu Center, Beşiktaş, İstanbul",
+    "city": "İstanbul",
+    "district": "Beşiktaş",
+    "latitude": 41.067,
+    "longitude": 29.017,
+    "google_place_id": "",
+    "google_rating": 4.1,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "merkezi",
+      "gece güvenli",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "3c4a1353-163f-40bb-aff2-ba3fe4e85a2c",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.527Z",
+    "updated_at": "2026-07-04T21:17:53.527Z",
+    "name": "360 Istanbul",
+    "category": "13f02778-8b58-4c55-8408-d85994bb14d6",
+    "description": "360 Istanbul - İstanbul'da popüler bir bar mekanı.",
+    "address": "İstiklal, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0328,
+    "longitude": 28.9773,
+    "google_place_id": "",
+    "google_rating": 4.3,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": false,
+    "safety_score": 6,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%10 TwinMatch indirimi",
+    "sponsor_perks": [
+      "kokteyl ikramı"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "49e28d9a-86c7-4ff1-8c1f-68e3de745bd7",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.547Z",
+    "updated_at": "2026-07-04T21:17:53.547Z",
+    "name": "Fazıl Bey'in Türk Kahvesi",
+    "category": "e0fb6168-c439-4fa4-aa91-c2d8fc62d73f",
+    "description": "Fazıl Bey'in Türk Kahvesi - İstanbul'da popüler bir kafe mekanı.",
+    "address": "Kadıköy Çarşı, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.982,
+    "longitude": 29.026,
+    "google_place_id": "",
+    "google_rating": 4.5,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "508f1d57-356a-40bc-a05e-e08c476b41ef",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.548Z",
+    "updated_at": "2026-07-04T21:17:53.548Z",
+    "name": "Adana Ocakbaşı Moda",
+    "category": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+    "description": "Adana Ocakbaşı Moda - İstanbul'da popüler bir restoran mekanı.",
+    "address": "Moda, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.9805,
+    "longitude": 29.0295,
+    "google_place_id": "",
+    "google_rating": 4.4,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "56e810dd-4a94-4a5f-b7de-9fb29a7b9469",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.529Z",
+    "updated_at": "2026-07-04T21:17:53.529Z",
+    "name": "Cabin Bomonti",
+    "category": "13f02778-8b58-4c55-8408-d85994bb14d6",
+    "description": "Cabin Bomonti - İstanbul'da popüler bir bar mekanı.",
+    "address": "Bomonti, Şişli, İstanbul",
+    "city": "İstanbul",
+    "district": "Şişli",
+    "latitude": 41.0602,
+    "longitude": 28.9868,
+    "google_place_id": "",
+    "google_rating": 4.2,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "merkezi",
+      "gece güvenli",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "5e14cfc3-cbf5-4082-8115-749dfab675f6",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.545Z",
+    "updated_at": "2026-07-04T21:17:53.545Z",
+    "name": "Çamlıca Tepesi Çay Bahçesi",
+    "category": "88d012f1-02d1-4df5-a4f7-f649e4fb3826",
+    "description": "Çamlıca Tepesi Çay Bahçesi - İstanbul'da popüler bir çay bahçesi mekanı.",
+    "address": "Çamlıca, Üsküdar, İstanbul",
+    "city": "İstanbul",
+    "district": "Üsküdar",
+    "latitude": 41.0225,
+    "longitude": 29.073,
+    "google_place_id": "",
+    "google_rating": 4.6,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "merkezi",
+      "gece güvenli"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%10 TwinMatch indirimi",
+    "sponsor_perks": [
+      "manzaralı masa önceliği"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "63efc3d1-082f-4010-87a8-5b082e428bf2",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.511Z",
+    "updated_at": "2026-07-04T21:17:53.511Z",
+    "name": "Kronotrop Karaköy",
+    "category": "e0fb6168-c439-4fa4-aa91-c2d8fc62d73f",
+    "description": "Kronotrop Karaköy - İstanbul'da popüler bir kafe mekanı.",
+    "address": "Karaköy, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0245,
+    "longitude": 28.9744,
+    "google_place_id": "",
+    "google_rating": 4.6,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "gece güvenli",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%15 TwinMatch indirimi",
+    "sponsor_perks": [
+      "ücretsiz kahve"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "91200d77-d80e-4adf-be39-45328f6ba306",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.514Z",
+    "updated_at": "2026-07-04T21:17:53.514Z",
+    "name": "Petra Roasting Co. Moda",
+    "category": "e0fb6168-c439-4fa4-aa91-c2d8fc62d73f",
+    "description": "Petra Roasting Co. Moda - İstanbul'da popüler bir kafe mekanı.",
+    "address": "Moda, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.9825,
+    "longitude": 29.0308,
+    "google_place_id": "",
+    "google_rating": 4.7,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 9,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "919fbff7-3505-4510-a7f2-311bd06b2dac",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.542Z",
+    "updated_at": "2026-07-04T21:17:53.542Z",
+    "name": "Pierre Loti Çay Bahçesi",
+    "category": "88d012f1-02d1-4df5-a4f7-f649e4fb3826",
+    "description": "Pierre Loti Çay Bahçesi - İstanbul'da popüler bir çay bahçesi mekanı.",
+    "address": "Eyüp, Eyüpsultan, İstanbul",
+    "city": "İstanbul",
+    "district": "Eyüpsultan",
+    "latitude": 41.0553,
+    "longitude": 28.9345,
+    "google_place_id": "",
+    "google_rating": 4.5,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "merkezi"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "9c9feabc-771d-408a-918a-bc1493dbc500",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.531Z",
+    "updated_at": "2026-07-04T21:17:53.531Z",
+    "name": "Nu Teras",
+    "category": "13f02778-8b58-4c55-8408-d85994bb14d6",
+    "description": "Nu Teras - İstanbul'da popüler bir bar mekanı.",
+    "address": "Meşrutiyet, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0338,
+    "longitude": 28.9772,
+    "google_place_id": "",
+    "google_rating": 4.4,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": false,
+    "safety_score": 6,
+    "safety_criteria": [
+      "merkezi"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "bc5c9e4f-e1a9-47c7-bb00-ea87f8626565",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.518Z",
+    "updated_at": "2026-07-04T21:17:53.518Z",
+    "name": "Karaköy Lokantası",
+    "category": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+    "description": "Karaköy Lokantası - İstanbul'da popüler bir restoran mekanı.",
+    "address": "Karaköy, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0253,
+    "longitude": 28.9761,
+    "google_place_id": "",
+    "google_rating": 4.5,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%20 TwinMatch indirimi",
+    "sponsor_perks": [
+      "ücretsiz aperatif",
+      "rezervasyon önceliği"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "c24a077a-49de-4a53-8e0b-e9d7b4ccf0d7",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.536Z",
+    "updated_at": "2026-07-04T21:17:53.536Z",
+    "name": "Hafız Mustafa 1864 Sirkeci",
+    "category": "732a42ba-6fae-4750-9f2f-2c50a68a71e9",
+    "description": "Hafız Mustafa 1864 Sirkeci - İstanbul'da popüler bir tatlıcı mekanı.",
+    "address": "Sirkeci, Fatih, İstanbul",
+    "city": "İstanbul",
+    "district": "Fatih",
+    "latitude": 41.0136,
+    "longitude": 28.9772,
+    "google_place_id": "",
+    "google_rating": 4.6,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 9,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%10 TwinMatch indirimi",
+    "sponsor_perks": [
+      "ücretsiz çay"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "d4fc6de5-7378-49b4-96a8-01f134a8897b",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.544Z",
+    "updated_at": "2026-07-04T21:17:53.544Z",
+    "name": "Emirgan Korusu Çay Bahçesi",
+    "category": "88d012f1-02d1-4df5-a4f7-f649e4fb3826",
+    "description": "Emirgan Korusu Çay Bahçesi - İstanbul'da popüler bir çay bahçesi mekanı.",
+    "address": "Emirgan, Sarıyer, İstanbul",
+    "city": "İstanbul",
+    "district": "Sarıyer",
+    "latitude": 41.108,
+    "longitude": 29.053,
+    "google_place_id": "",
+    "google_rating": 4.4,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": false,
+    "sponsor_discount": "",
+    "sponsor_perks": [],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "dc08c9e9-c19f-4623-9437-cd0dffcb3701",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.533Z",
+    "updated_at": "2026-07-04T21:17:53.533Z",
+    "name": "The North Shield Kadıköy",
+    "category": "a60b8054-1f63-4cdc-b4a4-2ced96573c24",
+    "description": "The North Shield Kadıköy - İstanbul'da popüler bir pub mekanı.",
+    "address": "Kadıköy, Kadıköy, İstanbul",
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "latitude": 40.99,
+    "longitude": 29.027,
+    "google_place_id": "",
+    "google_rating": 4.3,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 8,
+    "safety_criteria": [
+      "kalabalık",
+      "merkezi",
+      "toplu taşıma yakın"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%15 TwinMatch indirimi",
+    "sponsor_perks": [
+      "ücretsiz atıştırmalık"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "ed538492-305e-49b7-aca0-bd824b393671",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.522Z",
+    "updated_at": "2026-07-04T21:17:53.522Z",
+    "name": "Mikla Restaurant",
+    "category": "3c37ca83-bb56-47fa-8b84-e1beb90ef59c",
+    "description": "Mikla Restaurant - İstanbul'da popüler bir restoran mekanı.",
+    "address": "Beyoğlu, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.035,
+    "longitude": 28.977,
+    "google_place_id": "",
+    "google_rating": 4.7,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 9,
+    "safety_criteria": [
+      "merkezi",
+      "gece güvenli"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%15 TwinMatch indirimi",
+    "sponsor_perks": [
+      "şarap ikramı"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+},
+{
+  "model": "venues.venue",
+  "pk": "fe18e271-3b40-4dc2-b874-df074ace53f9",
+  "fields": {
+    "created_at": "2026-07-04T21:17:53.516Z",
+    "updated_at": "2026-07-04T21:17:53.516Z",
+    "name": "Coffee Department Cihangir",
+    "category": "e0fb6168-c439-4fa4-aa91-c2d8fc62d73f",
+    "description": "Coffee Department Cihangir - İstanbul'da popüler bir kafe mekanı.",
+    "address": "Cihangir, Beyoğlu, İstanbul",
+    "city": "İstanbul",
+    "district": "Beyoğlu",
+    "latitude": 41.0322,
+    "longitude": 28.982,
+    "google_place_id": "",
+    "google_rating": 4.5,
+    "phone": "",
+    "website": "",
+    "image_url": "",
+    "is_safe_date_spot": true,
+    "safety_score": 7,
+    "safety_criteria": [
+      "merkezi",
+      "gece güvenli"
+    ],
+    "is_sponsored": true,
+    "sponsor_discount": "%10 TwinMatch indirimi",
+    "sponsor_perks": [
+      "rezervasyon önceliği"
+    ],
+    "opening_hours": {},
+    "is_active": true
+  }
+}
+]

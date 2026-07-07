@@ -1,0 +1,1022 @@
+[
+  {
+    "model": "gifts.giftcategory",
+    "pk": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.397Z",
+      "updated_at": "2026-07-04T21:15:31.397Z",
+      "name": "Tasarım Kupa",
+      "slug": "tasarim-kupa",
+      "icon": "☕️",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.400Z",
+      "updated_at": "2026-07-04T21:15:31.400Z",
+      "name": "Aksesuar",
+      "slug": "aksesuar",
+      "icon": "💍",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.373Z",
+      "updated_at": "2026-07-04T21:15:31.373Z",
+      "name": "Çiçek",
+      "slug": "cicek",
+      "icon": "💐",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.388Z",
+      "updated_at": "2026-07-04T21:15:31.388Z",
+      "name": "Peluş",
+      "slug": "pelus",
+      "icon": "🧸",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.381Z",
+      "updated_at": "2026-07-04T21:15:31.381Z",
+      "name": "Kahve",
+      "slug": "kahve",
+      "icon": "☕",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.391Z",
+      "updated_at": "2026-07-04T21:15:31.391Z",
+      "name": "Mum",
+      "slug": "mum",
+      "icon": "🕯️",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "c0a57532-cd18-40ea-bae9-d2d076072530",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.403Z",
+      "updated_at": "2026-07-04T21:15:31.403Z",
+      "name": "Özel Gün Kutusu",
+      "slug": "ozel-gun-kutusu",
+      "icon": "🎁",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "c258989e-09a4-4710-9d1b-969becb0ef62",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.385Z",
+      "updated_at": "2026-07-04T21:15:31.385Z",
+      "name": "Kitap",
+      "slug": "kitap",
+      "icon": "📚",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.394Z",
+      "updated_at": "2026-07-04T21:15:31.394Z",
+      "name": "Kozmetik",
+      "slug": "kozmetik",
+      "icon": "💄",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftcategory",
+    "pk": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.377Z",
+      "updated_at": "2026-07-04T21:15:31.377Z",
+      "name": "Çikolata",
+      "slug": "cikolata",
+      "icon": "🍫",
+      "is_active": true
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "076ce5ec-2499-4f01-8374-ac630cc4611d",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.445Z",
+      "updated_at": "2026-07-04T21:15:31.445Z",
+      "category": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+      "name": "Aromalı Kahve Çeşitleri Kutusu",
+      "description": "5 farklı aromada 100gr paketler.",
+      "price": "310.00",
+      "service_fee": "93.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "098777df-9558-4b8c-99a1-b359cc721baf",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.416Z",
+      "updated_at": "2026-07-04T21:15:31.416Z",
+      "category": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+      "name": "Solmayan Gül Kutusu",
+      "description": "Yılda solmayan özel işlenmiş gül kutusu.",
+      "price": "890.00",
+      "service_fee": "267.00",
+      "image_url": "",
+      "supplier": "ciceksepeti",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "12dc0ca8-c7c1-4799-9c74-ed360a6b42fd",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.484Z",
+      "updated_at": "2026-07-04T21:15:31.484Z",
+      "category": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+      "name": "Lüks Cilt Bakım Kutusu",
+      "description": "Premium marka cilt bakım ürünleri seti.",
+      "price": "980.00",
+      "service_fee": "294.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "1485ae6f-8e68-4d05-98f4-d32d541a8253",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.452Z",
+      "updated_at": "2026-07-04T21:15:31.452Z",
+      "category": "c258989e-09a4-4710-9d1b-969becb0ef62",
+      "name": "Aşk Şiirleri Antolojisi",
+      "description": "Türk ve dünya edebiyatından aşk şiirleri seçkisi.",
+      "price": "190.00",
+      "service_fee": "57.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "19041672-33dc-4e8a-aef3-a2a7f3ffe759",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.462Z",
+      "updated_at": "2026-07-04T21:15:31.462Z",
+      "category": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+      "name": "Mini Panda Peluş",
+      "description": "Sevimli mini panda peluş oyuncak.",
+      "price": "180.00",
+      "service_fee": "54.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "1e4defb6-1bba-4054-9031-a489dd2d3fd4",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.492Z",
+      "updated_at": "2026-07-04T21:15:31.492Z",
+      "category": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+      "name": "Gümüş Kalp Kolye",
+      "description": "925 ayar gümüş kalp figürlü kolye.",
+      "price": "890.00",
+      "service_fee": "267.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "246143b9-4ff1-4b5f-9d6f-00317c8fa65e",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.471Z",
+      "updated_at": "2026-07-04T21:15:31.471Z",
+      "category": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+      "name": "Romantik Kalp Şekilli Mum Seti",
+      "description": "6 adet kalp şeklinde küçük mum seti.",
+      "price": "150.00",
+      "service_fee": "45.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "2f302270-79e0-4d18-8ff0-1ae930ac6e0c",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.481Z",
+      "updated_at": "2026-07-04T21:15:31.481Z",
+      "category": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+      "name": "El Kremi ve Sabun Seti",
+      "description": "Doğal yağlarla zenginleştirilmiş bakım seti.",
+      "price": "290.00",
+      "service_fee": "87.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "38fbefe4-118a-4f1a-ad48-d877eff4a826",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.440Z",
+      "updated_at": "2026-07-04T21:15:31.440Z",
+      "category": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+      "name": "Türk Kahvesi Hediye Seti",
+      "description": "Fincan takımı ile birlikte özel Türk kahvesi.",
+      "price": "420.00",
+      "service_fee": "126.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "3a204950-dd76-4dac-9bcb-5e1636a1b0d1",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.414Z",
+      "updated_at": "2026-07-04T21:15:31.414Z",
+      "category": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+      "name": "Renkli Papatya Aranjmanı",
+      "description": "Neşeli renklerde papatya aranjmanı.",
+      "price": "290.00",
+      "service_fee": "87.00",
+      "image_url": "",
+      "supplier": "ciceksepeti",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "3b40da64-45dd-4c36-acf9-76b6ba7dc9c2",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.504Z",
+      "updated_at": "2026-07-04T21:15:31.504Z",
+      "category": "c0a57532-cd18-40ea-bae9-d2d076072530",
+      "name": "Doğum Günü Kutlama Kutusu",
+      "description": "Balon, çikolata ve kart içeren kutlama kutusu.",
+      "price": "480.00",
+      "service_fee": "144.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "42ac259c-fe57-4700-b0c7-3a0aa7628440",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.456Z",
+      "updated_at": "2026-07-04T21:15:31.456Z",
+      "category": "c258989e-09a4-4710-9d1b-969becb0ef62",
+      "name": "Bir Ömür Bir Roman Seti",
+      "description": "3 kitaplık klasik roman seti.",
+      "price": "350.00",
+      "service_fee": "105.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "44d27d09-9d02-4429-bb89-49b14c789c2e",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.488Z",
+      "updated_at": "2026-07-04T21:15:31.488Z",
+      "category": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+      "name": "Çift Kupa Seti",
+      "description": "Birbirini tamamlayan iki parça kupa seti.",
+      "price": "260.00",
+      "service_fee": "78.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "4f88caf7-9441-496a-96e4-d383dbf1a86e",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.458Z",
+      "updated_at": "2026-07-04T21:15:31.458Z",
+      "category": "c258989e-09a4-4710-9d1b-969becb0ef62",
+      "name": "Fısıldayan Sözler İllüstrasyonlu Kitap",
+      "description": "Romantik illüstrasyonlarla süslenmiş özel kitap.",
+      "price": "240.00",
+      "service_fee": "72.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "518c854f-fd23-4740-864a-7ad2a75f2372",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.418Z",
+      "updated_at": "2026-07-04T21:15:31.418Z",
+      "category": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+      "name": "Godiva Çikolata Kutusu",
+      "description": "24 parça premium Belçika çikolatası.",
+      "price": "750.00",
+      "service_fee": "225.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "57bb455d-badf-469f-b4a7-4f15e13f5176",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.451Z",
+      "updated_at": "2026-07-04T21:15:31.451Z",
+      "category": "c258989e-09a4-4710-9d1b-969becb0ef62",
+      "name": "Küçük Prens (Özel Baskı)",
+      "description": "Ciltli, özel tasarım kapak ile Küçük Prens.",
+      "price": "220.00",
+      "service_fee": "66.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "5a0db955-bb1e-4b26-9478-5eb0b56c22be",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.406Z",
+      "updated_at": "2026-07-04T21:15:31.406Z",
+      "category": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+      "name": "12 Kırmızı Gül Buketi",
+      "description": "Taze kesim 12 adet kırmızı gül, şık ambalaj ile.",
+      "price": "450.00",
+      "service_fee": "135.00",
+      "image_url": "",
+      "supplier": "ciceksepeti",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "61c21335-8ee6-48e3-aaa2-e88bef1c1235",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.467Z",
+      "updated_at": "2026-07-04T21:15:31.467Z",
+      "category": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+      "name": "Dev Boy Unicorn Peluş",
+      "description": "90cm dev boy unicorn peluş oyuncak.",
+      "price": "520.00",
+      "service_fee": "156.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "627d04f2-a1ea-4367-91d8-ad4db969db09",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.424Z",
+      "updated_at": "2026-07-04T21:15:31.424Z",
+      "category": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+      "name": "El Yapımı Truffle Seti",
+      "description": "12 parça el yapımı truffle çikolata seçkisi.",
+      "price": "410.00",
+      "service_fee": "123.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "62ee0f05-7e9d-463a-8e40-9a2b5aae032b",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.409Z",
+      "updated_at": "2026-07-04T21:15:31.409Z",
+      "category": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+      "name": "Beyaz Orkide Saksı",
+      "description": "Zarif beyaz orkide, uzun ömürlü saksı çiçeği.",
+      "price": "620.00",
+      "service_fee": "186.00",
+      "image_url": "",
+      "supplier": "ciceksepeti",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "6718b821-d983-42c5-9875-ce2ca602cac0",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.503Z",
+      "updated_at": "2026-07-04T21:15:31.503Z",
+      "category": "c0a57532-cd18-40ea-bae9-d2d076072530",
+      "name": "Sevgililer Günü Lüks Kutu",
+      "description": "Gül, çikolata ve takı içeren premium kutu.",
+      "price": "1250.00",
+      "service_fee": "375.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "6964f5fa-6b48-4883-bfe3-fd3a1f1a44e9",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.430Z",
+      "updated_at": "2026-07-04T21:15:31.430Z",
+      "category": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+      "name": "Beyaz Çikolata Çilek Kutusu",
+      "description": "Beyaz çikolataya batırılmış taze çilekler.",
+      "price": "480.00",
+      "service_fee": "144.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "6a830647-90dc-474e-83d9-b404a0a2f547",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.464Z",
+      "updated_at": "2026-07-04T21:15:31.464Z",
+      "category": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+      "name": "Sarılan Kalpler Peluş Seti",
+      "description": "İki adet birbirine sarılan kalp peluş.",
+      "price": "260.00",
+      "service_fee": "78.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "6cfe23b6-8345-45b4-9902-613f41b971d6",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.499Z",
+      "updated_at": "2026-07-04T21:15:31.499Z",
+      "category": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+      "name": "Anahtarlık Çifti",
+      "description": "Yin yang temalı sevgili anahtarlık seti.",
+      "price": "180.00",
+      "service_fee": "54.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "6ee6b255-da59-436e-a777-ac96331b92b6",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.442Z",
+      "updated_at": "2026-07-04T21:15:31.443Z",
+      "category": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+      "name": "V60 Demleme Seti",
+      "description": "Başlangıç seviyesi V60 filtre kahve demleme seti.",
+      "price": "590.00",
+      "service_fee": "177.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "70ceb3b1-b6c6-45cb-a936-7ba05ceae79f",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.475Z",
+      "updated_at": "2026-07-04T21:15:31.475Z",
+      "category": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+      "name": "Kişiye Özel İsimli Mum",
+      "description": "İsim baskılı özel tasarım aromalı mum.",
+      "price": "195.00",
+      "service_fee": "58.50",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "76ebd678-076a-4081-8138-1f89a84b3aba",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.487Z",
+      "updated_at": "2026-07-04T21:15:31.487Z",
+      "category": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+      "name": "Fotoğraflı Sürpriz Kupa",
+      "description": "Isıyla değişen fotoğraf baskılı sihirli kupa.",
+      "price": "220.00",
+      "service_fee": "66.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "7b74171f-c37b-4d5a-999d-f468ab7688ae",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.426Z",
+      "updated_at": "2026-07-04T21:15:31.426Z",
+      "category": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+      "name": "Kişiye Özel Çikolata Kartı",
+      "description": "İsim baskılı özel çikolata kartpostal seti.",
+      "price": "260.00",
+      "service_fee": "78.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "820841f6-9129-49ef-89dd-d11be734ff94",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.470Z",
+      "updated_at": "2026-07-04T21:15:31.470Z",
+      "category": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+      "name": "Lavanta Aromalı Soya Mum",
+      "description": "El yapımı doğal soya bazlı lavanta mumu.",
+      "price": "210.00",
+      "service_fee": "63.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "82931e7e-cce3-4860-a09b-c41029b98654",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.486Z",
+      "updated_at": "2026-07-04T21:15:31.486Z",
+      "category": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+      "name": "İsimli Aşk Kupası",
+      "description": "Kişiye özel isim baskılı seramik kupa.",
+      "price": "160.00",
+      "service_fee": "48.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "83cc1c50-ca73-4c20-bcbf-5b22f2df3e64",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.477Z",
+      "updated_at": "2026-07-04T21:15:31.477Z",
+      "category": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+      "name": "Doğal Bakım Seti (5 Parça)",
+      "description": "Yüz ve vücut bakımı için doğal içerikli set.",
+      "price": "640.00",
+      "service_fee": "192.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "86bfeecb-d4c0-4c32-9cdf-911fc9c4aae1",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.474Z",
+      "updated_at": "2026-07-04T21:15:31.474Z",
+      "category": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+      "name": "Gül Kokulu 3'lü Mum Seti",
+      "description": "Farklı boylarda gül aromalı mum seti.",
+      "price": "270.00",
+      "service_fee": "81.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "9317a5a0-86ba-4f05-b2c5-e0d657c7a78f",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.508Z",
+      "updated_at": "2026-07-04T21:15:31.508Z",
+      "category": "c0a57532-cd18-40ea-bae9-d2d076072530",
+      "name": "Yeni Evlilik Hediye Kutusu",
+      "description": "Ev dekorasyonu ve tatlı içeren özel kutu.",
+      "price": "890.00",
+      "service_fee": "267.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "platinum"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "9468eff9-b7c8-4b60-858c-378a708099c6",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.421Z",
+      "updated_at": "2026-07-04T21:15:31.421Z",
+      "category": "faca1695-4b24-47a8-bee5-c1292eb318f0",
+      "name": "Ferrero Rocher T24",
+      "description": "24'lü Ferrero Rocher hediye kutusu.",
+      "price": "320.00",
+      "service_fee": "96.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "97bded18-3cab-48a9-8309-bfbf5b7bf120",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.459Z",
+      "updated_at": "2026-07-04T21:15:31.459Z",
+      "category": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+      "name": "Kalp Tutan Ayıcık (40cm)",
+      "description": "Kırmızı kalp tutan büyük boy peluş ayı.",
+      "price": "310.00",
+      "service_fee": "93.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "a2674f51-7c15-4d3f-a809-82e3b8a5233f",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.491Z",
+      "updated_at": "2026-07-04T21:15:31.491Z",
+      "category": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+      "name": "Yıldızlı Gece Kupa",
+      "description": "Karanlıkta parlayan yıldız desenli kupa.",
+      "price": "250.00",
+      "service_fee": "75.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "a40e5b1d-a585-496d-8c92-b3ef59c9e136",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.454Z",
+      "updated_at": "2026-07-04T21:15:31.454Z",
+      "category": "c258989e-09a4-4710-9d1b-969becb0ef62",
+      "name": "Kişiye Özel Anı Defteri",
+      "description": "İsim baskılı deri kapaklı anı defteri.",
+      "price": "280.00",
+      "service_fee": "84.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "a82a63b7-9970-48da-bd7e-20d54e62caa6",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.468Z",
+      "updated_at": "2026-07-04T21:15:31.468Z",
+      "category": "84479887-3c2f-4532-8f47-e7fccbfbf357",
+      "name": "Konuşan Aşk Ayıcığı",
+      "description": "Ses kaydı özellikli özel mesajlı ayıcık.",
+      "price": "390.00",
+      "service_fee": "117.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "ad5975f5-17f7-4da2-9948-7389fcbf7f33",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.411Z",
+      "updated_at": "2026-07-04T21:15:31.411Z",
+      "category": "5b0f8d9b-aa14-4f75-af04-b59e9da98d97",
+      "name": "Pembe Lilyum Buketi",
+      "description": "Mevsim lilyumlarından hazırlanmış özel buket.",
+      "price": "380.00",
+      "service_fee": "114.00",
+      "image_url": "",
+      "supplier": "ciceksepeti",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "ae3fcbff-fd67-46d6-b01d-8b2231d6846a",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.489Z",
+      "updated_at": "2026-07-04T21:15:31.489Z",
+      "category": "1bf1bf4f-3920-48e3-87e9-e408ee2dc573",
+      "name": "Komik Sözlü Kupa",
+      "description": "Eğlenceli aşk temalı baskılı kupa.",
+      "price": "140.00",
+      "service_fee": "42.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "b4c72bc4-0812-4aef-8c44-4357034e23b8",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.448Z",
+      "updated_at": "2026-07-04T21:15:31.448Z",
+      "category": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+      "name": "Kapsül Kahve Çeşitleri Seti",
+      "description": "20 adet karışık kapsül kahve seti.",
+      "price": "380.00",
+      "service_fee": "114.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "c5e92811-289d-41a1-acb0-3bc62d260247",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.472Z",
+      "updated_at": "2026-07-04T21:15:31.472Z",
+      "category": "adb95c75-5a9b-41c3-bf5e-b8c0a740f6a5",
+      "name": "Vanilya Kokulu Cam Kavanoz Mum",
+      "description": "Uzun yanma süreli vanilya aromalı mum.",
+      "price": "230.00",
+      "service_fee": "69.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "d10daa26-31c7-42b7-9ea6-2974688bdfe9",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.496Z",
+      "updated_at": "2026-07-04T21:15:31.496Z",
+      "category": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+      "name": "Çift Yüzük Seti",
+      "description": "Basit tasarım paslanmaz çelik çift yüzük seti.",
+      "price": "410.00",
+      "service_fee": "123.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "deded8f9-ab20-4886-ab9a-6c16d1b0441e",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.506Z",
+      "updated_at": "2026-07-04T21:15:31.506Z",
+      "category": "c0a57532-cd18-40ea-bae9-d2d076072530",
+      "name": "Barışma Sürpriz Kutusu",
+      "description": "Özür dileme temalı çiçek ve not içeren kutu.",
+      "price": "560.00",
+      "service_fee": "168.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "df00d18a-dd42-4873-ba77-16d3dd4f1c31",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.494Z",
+      "updated_at": "2026-07-04T21:15:31.494Z",
+      "category": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+      "name": "İsim Baskılı Bileklik",
+      "description": "Deri bileklik üzerine özel isim baskısı.",
+      "price": "320.00",
+      "service_fee": "96.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "f1fe7c13-60d2-4101-86ef-303377b79684",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.501Z",
+      "updated_at": "2026-07-04T21:15:31.501Z",
+      "category": "c0a57532-cd18-40ea-bae9-d2d076072530",
+      "name": "Yıldönümü Sürpriz Kutusu",
+      "description": "Çikolata, mum ve kartpostal içeren özel kutu.",
+      "price": "750.00",
+      "service_fee": "225.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "f5fe594d-fd2c-4120-afd1-53549a621093",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.432Z",
+      "updated_at": "2026-07-04T21:15:31.432Z",
+      "category": "a8703cf4-e075-4ee4-a5a0-5a9e62e64123",
+      "name": "Özel Harman Filtre Kahve Seti",
+      "description": "3 farklı özel harman 250gr filtre kahve.",
+      "price": "340.00",
+      "service_fee": "102.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "fa70f8bc-c85a-490c-a2d9-d701ba1e4960",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.498Z",
+      "updated_at": "2026-07-04T21:15:31.498Z",
+      "category": "3678d15e-a480-41a7-bc4a-dd5f4d30ffad",
+      "name": "Takı Kutusu Hediye Seti",
+      "description": "Küpe ve kolye içeren şık takı seti.",
+      "price": "560.00",
+      "service_fee": "168.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "ff65d666-c7ed-4a8c-955a-68b56f5ec5d4",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.479Z",
+      "updated_at": "2026-07-04T21:15:31.479Z",
+      "category": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+      "name": "Parfüm Numune Koleksiyonu",
+      "description": "8 farklı parfüm numunesi kutusu.",
+      "price": "480.00",
+      "service_fee": "144.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  },
+  {
+    "model": "gifts.giftproduct",
+    "pk": "ffb8b98b-8b95-4ccf-a0fe-9b2957e58858",
+    "fields": {
+      "created_at": "2026-07-04T21:15:31.482Z",
+      "updated_at": "2026-07-04T21:15:31.482Z",
+      "category": "d18ce650-a50a-4a84-97d1-cb15d2917dc8",
+      "name": "Aromaterapi Yağları Seti",
+      "description": "5 farklı esansiyel yağ seti.",
+      "price": "350.00",
+      "service_fee": "105.00",
+      "image_url": "",
+      "supplier": "amazon",
+      "supplier_product_id": "",
+      "is_available": true,
+      "tier_required": "gold"
+    }
+  }
+]
