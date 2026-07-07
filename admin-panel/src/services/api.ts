@@ -113,3 +113,36 @@ export const getSubscriptionStats = () => apiFetch<Record<string, unknown>>("/ad
 export const getReports = () => apiFetch<Record<string, unknown>>("/admin/reports/");
 export const setUserStatus = (id: string, isActive: boolean) =>
   apiFetch(`/admin/users/${id}/status/`, { method: "PUT", body: JSON.stringify({ is_active: isActive }) });
+
+// --- Faz 3: canlı admin sayfaları için tipler ---
+
+export interface MatchStatsPayload {
+  total_matches: number;
+  active_matches: number;
+  completed_matches: number;
+  revealed_matches: number;
+  average_score: number;
+  stage_breakdown: Record<string, number>;
+  top_pairs: { match_id: string; user_a: string; user_b: string; overall_score: number | null; status: string }[];
+}
+
+export interface SubscriptionStatsPayload {
+  active_subscriptions: number;
+  annual_subscriptions: number;
+  monthly_revenue: number;
+  plan_breakdown: Record<string, number>;
+  payment_status_breakdown: Record<string, number>;
+}
+
+export interface ReportStatsPayload {
+  pending_user_reports: number;
+  pending_verifications: number;
+  rejected_verifications: number;
+  incomplete_profiles: number;
+  inactive_digital_twins: number;
+  low_score_matches: number;
+}
+
+export const getMatchStatsTyped = () => apiFetch<MatchStatsPayload>("/admin/matches/");
+export const getSubscriptionStatsTyped = () => apiFetch<SubscriptionStatsPayload>("/admin/subscriptions/");
+export const getReportStatsTyped = () => apiFetch<ReportStatsPayload>("/admin/reports/");

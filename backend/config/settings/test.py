@@ -39,3 +39,6 @@ except Exception:
 
 # Testlerde rate limiting devre dışı
 DISABLE_THROTTLING = True
+
+EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
+DEFAULT_FROM_EMAIL = "no-reply@twinmatch.app"

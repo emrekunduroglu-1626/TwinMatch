@@ -143,9 +143,12 @@ class SendOtpView(APIView):
             code_hash=_hash_code(code),
             expires_at=timezone.now() + OTP_TTL,
         )
-        # TODO: SMS sağlayıcı entegrasyonu (Netgsm/Twilio).
-        # Geliştirme ortamında kod loglanır, üretimde asla response'a konmaz.
-        response = {"detail": "Doğrulama kodu gönderildi.", "ttl_seconds": int(OTP_TTL.total_seconds())}
+        from .sms import send_otp_sms
+        delivered = send_otp_sms(phone, code)
+        response = {
+            "detail": "Doğrulama kodu gönderildi." if delivered else "Kod oluşturuldu ancak SMS teslimi doğrulanamadı.",
+            "ttl_seconds": int(OTP_TTL.total_seconds()),
+        }
         from django.conf import settings as dj_settings
         if dj_settings.DEBUG:
             response["debug_code"] = code
@@ -209,8 +212,33 @@ class PasswordResetView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = PasswordResetSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        email = serializer.validated_data["email"].lower().strip()
+        user = User.objects.filter(email__iexact=email, is_active=True).first()
+        if user:
+            from django.contrib.auth.tokens import default_token_generator
+            from django.core.mail import send_mail
+            from django.utils.encoding import force_bytes
+            from django.utils.http import urlsafe_base64_encode
+            from django.conf import settings as dj_settings
+
+            uid = urlsafe_base64_encode(force_bytes(user.pk))
+            token = default_token_generator.make_token(user)
+            base = getattr(dj_settings, "FRONTEND_RESET_URL", "twinmatch://password-reset")
+            reset_link = f"{base}?uid={uid}&token={token}"
+            try:
+                send_mail(
+                    subject="TwinMatch şifre sıfırlama",
+                    message=(
+                        "Şifrenizi sıfırlamak için bağlantıya dokunun (1 saat geçerli):\n"
+                        f"{reset_link}\n\nBu isteği siz yapmadıysanız bu e-postayı yok sayın."
+                    ),
+                    from_email=None,
+                    recipient_list=[user.email],
+                    fail_silently=True,
+                )
+            except Exception:
+                pass  # E-posta hatası hesap varlığını sızdırmamalı
         # Hesap var mı yok mu sızdırılmaz — her durumda aynı yanıt.
-        # TODO: e-posta sağlayıcı entegrasyonu ile sıfırlama linki gönderimi.
         return Response({"detail": "Eğer bu e-posta kayıtlıysa, sıfırlama bağlantısı gönderildi."})
 
 
@@ -259,3 +287,38 @@ class DeleteAccountView(APIView):
         request.user.set_unusable_password()
         request.user.save(update_fields=["is_active", "email", "phone", "password", "updated_at"])
         return Response({"detail": "Hesap kapatıldı ve kişisel erişim verileri anonimleştirildi."})
+
+
+class PasswordResetConfirmView(APIView):
+    """uid+token ile yeni şifre belirleme. Token 1 kez kullanılabilir (Django default generator)."""
+
+    permission_classes = [AllowAny]
+    throttle_classes = [AuthBurstThrottle]
+
+    def post(self, request, *args, **kwargs):
+        from django.contrib.auth.password_validation import validate_password
+        from django.contrib.auth.tokens import default_token_generator
+        from django.core.exceptions import ValidationError as DjangoValidationError
+        from django.utils.encoding import force_str
+        from django.utils.http import urlsafe_base64_decode
+
+        uid = request.data.get("uid", "")
+        token = request.data.get("token", "")
+        new_password = request.data.get("new_password", "")
+
+        try:
+            user = User.objects.get(pk=force_str(urlsafe_base64_decode(uid)))
+        except (User.DoesNotExist, ValueError, TypeError, OverflowError):
+            return Response({"detail": "Bağlantı geçersiz veya süresi dolmuş."}, status=status.HTTP_400_BAD_REQUEST)
+
+        if not default_token_generator.check_token(user, token):
+            return Response({"detail": "Bağlantı geçersiz veya süresi dolmuş."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            validate_password(new_password, user=user)
+        except DjangoValidationError as exc:
+            return Response({"detail": exc.messages}, status=status.HTTP_400_BAD_REQUEST)
+
+        user.set_password(new_password)
+        user.save(update_fields=["password", "updated_at"])
+        return Response({"detail": "Şifreniz güncellendi. Yeni şifrenizle giriş yapabilirsiniz."})

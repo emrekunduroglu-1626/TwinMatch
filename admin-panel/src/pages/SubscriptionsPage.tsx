@@ -1,66 +1,66 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 
-const mockSubscriptions = [
-  { id: 's1', user: 'Ahmet K.', plan: 'Premium', price: '999 TL/ay', status: 'active', start: '2026-05-01', end: '2026-06-01' },
-  { id: 's2', user: 'Ayşe Y.', plan: 'VIP', price: '499 TL/ay', status: 'active', start: '2026-04-15', end: '2026-07-15' },
-  { id: 's3', user: 'Mehmet S.', plan: 'Freemium', price: '0 TL', status: 'active', start: '2026-06-01', end: '-' },
-  { id: 's4', user: 'Zeynep A.', plan: 'VIP', price: '4.999 TL/yıl', status: 'active', start: '2026-01-10', end: '2027-01-10' },
-  { id: 's5', user: 'Can D.', plan: 'Premium', price: '999 TL/ay', status: 'cancelled', start: '2026-03-01', end: '2026-06-01' },
-];
+import { getSubscriptionStatsTyped, SubscriptionStatsPayload } from "../services/api";
 
-const planColors: Record<string, string> = {
-  Freemium: '#999999',
-  VIP: '#FF6600',
-  Premium: '#FFD700',
-};
+const PLAN_LABELS: Record<string, string> = { basic: "Basic", plus: "Plus", premium: "Premium" };
+const PAYMENT_LABELS: Record<string, string> = { pending: "Bekliyor", paid: "Ödendi", failed: "Başarısız", refunded: "İade" };
 
 export default function SubscriptionsPage() {
-  const totalRevenue = 999 + 499 + 0 + 4999 + 999;
-  const distribution = { Freemium: 60, VIP: 25, Premium: 15 };
+  const [data, setData] = useState<SubscriptionStatsPayload | null>(null);
+  const [live, setLive] = useState(false);
+
+  useEffect(() => {
+    getSubscriptionStatsTyped()
+      .then((payload) => {
+        setData(payload);
+        setLive(true);
+      })
+      .catch(() => setLive(false));
+  }, []);
 
   return (
-    <div>
-      <h2 style={{ color: '#FF6600', marginBottom: 16 }}>Abonelikler</h2>
-
-      <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
-        <div style={{ background: '#1A1A1A', borderRadius: 12, padding: 20, flex: 1 }}>
-          <div style={{ color: '#999', fontSize: 14 }}>Aylık Toplam Gelir</div>
-          <div style={{ color: '#33CC33', fontSize: 28, fontWeight: 'bold' }}>₺{totalRevenue.toLocaleString()}</div>
+    <section className="page">
+      <div className="page-header">
+        <div>
+          <p className="eyebrow">Gelir operasyonu</p>
+          <h2>Abonelikler</h2>
         </div>
-        {Object.entries(distribution).map(([plan, pct]) => (
-          <div key={plan} style={{ background: '#1A1A1A', borderRadius: 12, padding: 20, flex: 1 }}>
-            <div style={{ color: '#999', fontSize: 14 }}>{plan}</div>
-            <div style={{ color: planColors[plan], fontSize: 28, fontWeight: 'bold' }}>%{pct}</div>
-          </div>
-        ))}
+        <span className={live ? "badge badge-live" : "badge badge-mock"}>
+          {live ? "● Canlı veri" : "○ Örnek veri (backend kapalı)"}
+        </span>
       </div>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr style={{ borderBottom: '2px solid #FF6600' }}>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Kullanıcı</th>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Plan</th>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Fiyat</th>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Durum</th>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Başlangıç</th>
-            <th style={{ padding: 10, textAlign: 'left', color: '#FF6600' }}>Bitiş</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mockSubscriptions.map(s => (
-            <tr key={s.id} style={{ borderBottom: '1px solid #333' }}>
-              <td style={{ padding: 10, color: '#FFF' }}>{s.user}</td>
-              <td style={{ padding: 10, color: planColors[s.plan] }}>{s.plan}</td>
-              <td style={{ padding: 10, color: '#FFF' }}>{s.price}</td>
-              <td style={{ padding: 10, color: s.status === 'active' ? '#33CC33' : '#FF3333' }}>
-                {s.status === 'active' ? 'Aktif' : 'İptal'}
-              </td>
-              <td style={{ padding: 10, color: '#999' }}>{s.start}</td>
-              <td style={{ padding: 10, color: '#999' }}>{s.end}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+      {data ? (
+        <>
+          <div className="metric-grid">
+            <article className="card metric-card"><span className="muted">Aktif abonelik</span><strong>{data.active_subscriptions}</strong></article>
+            <article className="card metric-card"><span className="muted">Yıllık plan</span><strong>{data.annual_subscriptions}</strong></article>
+            <article className="card metric-card"><span className="muted">Bu ay gelir</span><strong>₺{Number(data.monthly_revenue).toLocaleString("tr-TR")}</strong></article>
+          </div>
+
+          <div className="two-column">
+            <article className="card">
+              <h3>Plan dağılımı</h3>
+              <div className="stack">
+                {Object.entries(data.plan_breakdown).length === 0 && <p className="muted">Aktif abonelik yok</p>}
+                {Object.entries(data.plan_breakdown).map(([plan, count]) => (
+                  <div key={plan} className="row"><span>{PLAN_LABELS[plan] ?? plan}</span><strong>{count}</strong></div>
+                ))}
+              </div>
+            </article>
+            <article className="card">
+              <h3>Ödeme durumları</h3>
+              <div className="stack">
+                {Object.entries(data.payment_status_breakdown).map(([st, count]) => (
+                  <div key={st} className="row"><span>{PAYMENT_LABELS[st] ?? st}</span><strong>{count}</strong></div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </>
+      ) : (
+        <article className="card"><p className="muted">Canlı veri için backend'i başlatın ve admin girişi yapın.</p></article>
+      )}
+    </section>
   );
 }

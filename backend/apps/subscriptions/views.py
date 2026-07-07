@@ -7,7 +7,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from rest_framework.permissions import AllowAny
+
 from .models import Payment, Subscription
+from .payments import get_payment_provider
 
 
 PLAN_CATALOG = {
@@ -81,12 +84,17 @@ class PlansView(APIView):
 
 
 class CheckoutView(APIView):
+    """Ödeme başlat: PENDING abonelik oluşturur, sağlayıcının ödeme sayfası URL'ini döner.
+
+    Kart verisi hiçbir zaman bu API'ye gelmez — kullanıcı sağlayıcının kendi
+    sayfasında öder (PCI-DSS kapsamı sağlayıcıda kalır).
+    """
+
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
         plan = request.data.get("plan")
         is_annual = bool(request.data.get("is_annual", False))
-        iyzico_payment_id = request.data.get("iyzico_payment_id", "")
 
         if plan not in PLAN_CATALOG:
             return Response({"detail": "Gecersiz plan secimi."}, status=status.HTTP_400_BAD_REQUEST)
@@ -103,35 +111,88 @@ class CheckoutView(APIView):
         now = timezone.now()
         expires_at = now + (timedelta(days=365) if is_annual else timedelta(days=30))
 
+        provider = get_payment_provider()
+        callback_url = request.build_absolute_uri("/api/v1/subscriptions/checkout/callback/")
+        checkout = provider.initialize_checkout(
+            user=request.user, plan_code=plan, amount=amount,
+            is_annual=is_annual, callback_url=callback_url,
+        )
+
         subscription = Subscription.objects.create(
             user=request.user,
             plan=plan,
             price_monthly=plan_data["monthly_price"],
             price_yearly=plan_data["yearly_price"],
             is_annual=is_annual,
-            iyzico_subscription_ref=f"mock-sub-{request.user.id}-{int(now.timestamp())}",
-            status=Subscription.Status.ACTIVE,
+            iyzico_subscription_ref=checkout.provider_ref,
+            status=Subscription.Status.PENDING,
             started_at=now,
             expires_at=expires_at,
         )
-        payment = Payment.objects.create(
+        Payment.objects.create(
             user=request.user,
             subscription=subscription,
             amount=amount,
             currency="TRY",
-            iyzico_payment_id=iyzico_payment_id,
-            status=Payment.Status.PAID,
+            iyzico_payment_id=checkout.checkout_token,
+            status=Payment.Status.PENDING,
         )
         return Response(
-            {"subscription": _serialize_subscription(subscription), "payment_id": str(payment.id)},
+            {
+                "subscription": _serialize_subscription(subscription),
+                "checkout_url": checkout.checkout_url,
+                "checkout_token": checkout.checkout_token,
+            },
             status=status.HTTP_201_CREATED,
         )
 
 
-class IyzicoWebhookView(APIView):
+class CheckoutCallbackView(APIView):
+    """Kullanıcı ödeme sayfasından dönünce token doğrulanır ve abonelik aktive edilir."""
+
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
+        token = request.data.get("token", "")
+        if not token:
+            return Response({"detail": "token zorunludur."}, status=status.HTTP_400_BAD_REQUEST)
+
+        payment = Payment.objects.filter(iyzico_payment_id=token, user=request.user).select_related("subscription").first()
+        if not payment or not payment.subscription:
+            return Response({"detail": "Ödeme kaydı bulunamadı."}, status=status.HTTP_404_NOT_FOUND)
+
+        if payment.status == Payment.Status.PAID:
+            return Response({"subscription": _serialize_subscription(payment.subscription)})  # idempotent
+
+        result = get_payment_provider().verify_checkout(token)
+        subscription = payment.subscription
+
+        if result == "paid":
+            payment.status = Payment.Status.PAID
+            subscription.status = Subscription.Status.ACTIVE
+        elif result == "failed":
+            payment.status = Payment.Status.FAILED
+            subscription.status = Subscription.Status.EXPIRED
+            subscription.expires_at = timezone.now()
+        # pending → dokunma, kullanıcı tekrar deneyebilir
+
+        payment.save(update_fields=["status", "updated_at"])
+        subscription.save(update_fields=["status", "expires_at", "updated_at"])
+        return Response({"result": result, "subscription": _serialize_subscription(subscription)})
+
+
+class IyzicoWebhookView(APIView):
+    """Sunucudan-sunucuya bildirim. Kimlik JWT ile DEĞİL, gövde HMAC imzasıyla doğrulanır
+    (webhook'u gönderen Iyzico sunucusudur, kullanıcı oturumu taşımaz)."""
+
+    permission_classes = [AllowAny]
+    authentication_classes = []
+
+    def post(self, request, *args, **kwargs):
+        signature = request.headers.get("X-Iyz-Signature", "")
+        if not get_payment_provider().verify_webhook_signature(request.body, signature):
+            return Response({"detail": "İmza doğrulanamadı."}, status=status.HTTP_401_UNAUTHORIZED)
+
         subscription_ref = request.data.get("iyzico_subscription_ref")
         payment_status = request.data.get("status")
 
